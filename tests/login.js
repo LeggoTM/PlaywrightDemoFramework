@@ -5,7 +5,7 @@ const { credentials } = require('../utils/credentials');
 
 test.describe.configure({ mode: 'serial' });
 
-test.describe('Login Group @login', () => {
+test.describe('Login Group @login @smoke', () => {
   test.beforeEach(async ({ page }) => {
     const loginPage = new LoginPage(page);
     await page.goto('https://opensource-demo.orangehrmlive.com/');
@@ -27,4 +27,4 @@ test.describe('Login Group @login', () => {
     await loginPage.loginButton.click();
     await expect(loginPage.afterLoginPageHeading).toBeVisible();
   });
-})
+});
