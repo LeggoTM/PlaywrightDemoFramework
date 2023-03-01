@@ -36,10 +36,14 @@ test.describe('User Test Flows @userFlow', () => {
   })
 
   test('Search and delete the user', async ({ page }) => {
-    const adminPage = new AdminPage(page);
+    const adminPage = new AdminPage(page, credentials.newUsername);
     await adminPage.adminTab.click();
     await adminPage.searchUsername.fill(credentials.newUsername);
     await adminPage.searchButton.click();
-    await expect(page.locator('div').getByText(credentials.newUsername)).toBeVisible();
+    await expect(adminPage.searchResult).toBeVisible();
+    await adminPage.searchResultDelete.click();
+    await expect(adminPage.confirmDelete).toBeVisible();
+    await adminPage.confirmDelete.click();
+    await expect(adminPage.successMessage).toBeVisible();
   })
 });

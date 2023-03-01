@@ -20,7 +20,7 @@ test.describe('Login Group @login @smoke', () => {
     await expect(loginPage.errorMessage).toBeVisible();
   });
 
-  test('Positive Login Test', async ({ page }) => {
+  test('Positive Login Test @auth', async ({ page }) => {
     const loginPage = new LoginPage(page);
     await loginPage.usernameInput.fill(credentials.username);
     await loginPage.passwordInput.fill(credentials.password);

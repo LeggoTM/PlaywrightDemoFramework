@@ -1,5 +1,5 @@
 exports.AdminPage = class AdminPage {
-    constructor(page) {
+    constructor(page, newUsername) {
         this.page = page;
         this.adminTab = page.getByRole('link', { name: 'Admin' });
         this.addUserButton = page.getByRole('button', { name: 'Add' });
@@ -17,5 +17,8 @@ exports.AdminPage = class AdminPage {
         this.saveButton = page.getByRole('button', { name: 'Save' });
         this.searchUsername = page.locator('div[class*="input-group"]').filter({ hasText: 'Username' }).locator('input');
         this.searchButton = page.getByRole('button', { name: 'Search' });
+        this.searchResult = page.locator('div').getByText(newUsername);
+        this.searchResultDelete = page.getByRole('row').filter({ hasText: `${newUsername}` }).locator('i.bi-trash');
+        this.confirmDelete = page.getByRole('button', { name: 'Yes, Delete' });
     }
 }
