@@ -26,5 +26,8 @@ test.describe('Login Group @login @smoke', () => {
     await loginPage.passwordInput.fill(credentials.password);
     await loginPage.loginButton.click();
     await expect(loginPage.afterLoginDashboardHeading).toBeVisible();
+
+    // Store admin logged in state
+    await page.context().storageState({ path: 'utils/adminState.json' });
   });
 });
