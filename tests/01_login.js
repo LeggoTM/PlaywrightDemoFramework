@@ -25,6 +25,6 @@ test.describe('Login Group @login @smoke', () => {
     await loginPage.usernameInput.fill(credentials.username);
     await loginPage.passwordInput.fill(credentials.password);
     await loginPage.loginButton.click();
-    await expect(loginPage.afterLoginPageHeading).toBeVisible();
+    await expect(loginPage.afterLoginDashboardHeading).toBeVisible();
   });
 });
