@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "setAuth":"npx playwright test --project=chromium -g '@auth'",
+    "chrome:head": "npx playwright test --project=chromium --workers=1 --headed"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
