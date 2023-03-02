@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "setAuth":"npx playwright test --project=chromium -g '@auth'",
+    "setAuth": "npx playwright test --project=chromium -g '@auth'",
     "chrome:head": "npx playwright test --project=chromium --workers=1 --headed"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.31.1"
+    "@playwright/test": "^1.31.1",
+    "allure-playwright": "^2.0.0"
   }
 }
