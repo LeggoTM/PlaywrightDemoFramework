@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "setAuth": "npx playwright test --project=chromium -g '@auth'",
-    "chrome:head": "npx playwright test --project=chromium --workers=1 --headed"
+    "chrome:head": "npx playwright test --project=chromium --workers=1 --headed",
+    "chrome:headless": "npx playwright test --project=chromium --workers=1"
   },
   "keywords": [],
   "author": "",
