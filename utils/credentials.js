@@ -1,7 +1,7 @@
 const credentials = {
     username: 'Admin',
     password: 'admin123',
-    newUsername: 'PlaywrightDemo',
+    newUsername: 'PlaywrightForJenkins',
     newPassword: 'Playwright@1'
 }
 
